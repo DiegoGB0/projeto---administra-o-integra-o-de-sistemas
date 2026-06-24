@@ -1,16 +1,17 @@
 services:
-
   app1:
-  build: .
-  container_name: app1
-  networks:
-    - rede-interna
+    build:
+      context: .
+    container_name: app1
+    networks:
+      - rede-interna
 
-app2:
-  build: .
-  container_name: app2
-  networks:
-    - rede-interna
+  app2:
+    build:
+      context: .
+    container_name: app2
+    networks:
+      - rede-interna
 
   db:
     image: postgres:16
