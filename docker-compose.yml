@@ -37,27 +37,27 @@ services:
     networks:
       - rede-interna
 
-prometheus:
-  image: prom/prometheus
-  container_name: prometheus
-  ports:
-    - "9090:9090"
-  volumes:
-    - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
-  command:
-    - '--config.file=/etc/prometheus/prometheus.yml'
-  networks:
-    - app-network
+  prometheus:
+    image: prom/prometheus
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+    networks:
+      - rede-interna
 
-grafana:
-  image: grafana/grafana
-  container_name: grafana
-  ports:
-    - "3000:3000"
-  depends_on:
-    - prometheus
-  networks:
-    - app-network
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    depends_on:
+      - prometheus
+    networks:
+      - rede-interna
 
 volumes:
   postgres_data:
