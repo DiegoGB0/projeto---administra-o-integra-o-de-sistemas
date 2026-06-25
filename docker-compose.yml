@@ -58,3 +58,10 @@ grafana:
     - prometheus
   networks:
     - app-network
+
+volumes:
+  postgres_data:
+
+networks:
+  rede-interna:
+    driver: bridge
