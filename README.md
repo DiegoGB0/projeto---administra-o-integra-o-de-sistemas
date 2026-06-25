@@ -92,6 +92,61 @@ Parar o ambiente:
 docker compose down
 ```
 
+# Monitoramento e Automação
+
+## Como executar
+
+Dar permissão ao script:
+
+chmod +x scripts/start-infra.sh
+
+Executar:
+
+./scripts/start-infra.sh
+
+## Serviços
+
+Aplicação:
+http://localhost
+
+Prometheus:
+http://localhost:9090
+
+Grafana:
+http://localhost:3000
+
+## Login Grafana
+
+Usuário:
+admin
+
+Senha:
+admin
+
+## Fonte de Dados
+
+Tipo:
+Prometheus
+
+URL:
+http://prometheus:9090
+
+## Dashboard
+
+Consulta utilizada:
+
+up
+
+Resultado:
+
+1 = serviço online
+
+0 = serviço offline
+
+## Verificação
+
+docker compose ps
+
 ## Status Atual
 
 - [x] Estrutura do projeto criada
