@@ -1,14 +1,177 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
-    <title>App 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoFeed</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #efefef;
+        }
+
+        header {
+            background: #fff;
+            padding: 15px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .feed {
+            width: 420px;
+            margin: 30px auto;
+        }
+
+        .post {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            overflow: hidden;
+        }
+
+        .usuario {
+            padding: 15px;
+            font-weight: bold;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        .info {
+            padding: 15px;
+        }
+
+        .curtidas {
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .servidor {
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #0b74d1;
+        }
+    </style>
+
 </head>
 
-<body style="font-family: Arial; text-align: center; margin-top: 100px;">
-    <h1>🚀 APP 1</h1>
-    <p>Rodando na instância 1</p>
+<body>
+
+    <header>
+        📷 PhotoFeed
+    </header>
+
+    <div class="feed">
+
+        <div class="post">
+
+            <div class="usuario">
+                diego.dev
+            </div>
+
+            <img src="https://picsum.photos/420/300?random=1">
+
+            <div class="info">
+
+                <div class="curtidas">
+                    ❤️ 235 curtidas
+                </div>
+
+                <p>
+                    Estudando Docker e Docker Compose para o projeto de Administração e Integração de Sistemas 🚀
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="post">
+
+            <div class="usuario">
+                kaue.tech
+            </div>
+
+            <img src="https://picsum.photos/420/300?random=2">
+
+            <div class="info">
+
+                <div class="curtidas">
+                    ❤️ 182 curtidas
+                </div>
+
+                <p>
+                    Infraestrutura quase pronta! Agora é testar o Load Balancer. 💻
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="post">
+
+            <div class="usuario">
+                eraldo.sys
+            </div>
+
+            <img src="https://picsum.photos/420/300?random=3">
+
+            <div class="info">
+
+                <div class="curtidas">
+                    ❤️ 127 curtidas
+                </div>
+
+                <p>
+                    Nginx configurado com sucesso e distribuindo as requisições entre as aplicações.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="post">
+
+            <div class="usuario">
+                José_Antônio.Júnior
+            </div>
+
+            <img src="https://picsum.photos/420/300?random=3">
+
+            <div class="info">
+
+                <div class="curtidas">
+                    ❤️ 127 curtidas
+                </div>
+
+                <p>
+                    Nginx configurado com sucesso e distribuindo as requisições entre as aplicações.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="servidor">
+            🟢 Servidor responsável: APP 1
+        </div>
+
+    </div>
+
 </body>
 
 </html>
