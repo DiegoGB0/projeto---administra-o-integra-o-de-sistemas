@@ -54,17 +54,31 @@ services:
       - rede-interna
 
   grafana:
-    image: grafana/grafana
+    image: grafana/grafana:11.6.0
     container_name: grafana
     ports:
       - "3000:3000"
     depends_on:
       - prometheus
+    volumes:
+      - grafana_data:/var/lib/grafana
+    networks:
+      - rede-interna
+
+  nginx-exporter:
+    image: nginx/nginx-prometheus-exporter:latest
+    container_name: nginx-exporter
+    command: --nginx.scrape-uri=http://nginx-lb/status
+    ports:
+      - "9113:9113"
+    depends_on:
+      - nginx
     networks:
       - rede-interna
 
 volumes:
   postgres_data:
+  grafana_data:
 
 networks:
   rede-interna:
